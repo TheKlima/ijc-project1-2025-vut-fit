@@ -1,1 +1,4 @@
-# ijc-project1-2025-vut-fit
+# První projekt z předmětu IJC (jazyk C)
+
+## Zadání
+Naleznete v souboru zadani

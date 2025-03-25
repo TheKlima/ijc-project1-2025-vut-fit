@@ -1,3 +1,9 @@
+CMakeLists.txt
+cmake-build-debug
+*.zip
+.idea
+test
+
 # Prerequisites
 *.d
 
