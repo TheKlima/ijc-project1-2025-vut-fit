@@ -2,7 +2,9 @@ CMakeLists.txt
 cmake-build-debug
 *.zip
 .idea
-test
+primes
+primes-i
+steg-decode
 
 # Prerequisites
 *.d
