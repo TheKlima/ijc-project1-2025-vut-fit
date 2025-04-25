@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -std=c11 -pedantic -Wall -Wextra
+CFLAGS = -O2 -g -std=c11 -pedantic -Wall -Wextra
 LDLIBS = -lm
 
 all: primes primes-i steg-decode
