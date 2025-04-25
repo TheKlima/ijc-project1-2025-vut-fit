@@ -45,7 +45,7 @@ typedef unsigned long bitset_index_t; // index to array of bits
 
 // resets or sets to 1 the entire contents of the array based on the value of the expression
 #define bitset_fill(arr_name, expr) \
-    memset(arr_name + 1, expr ? ULONG_MAX : 0, ((arr_name[0] / BITS_IN_UL) + (arr_name[0] % BITS_IN_UL == 0 ? 0 : 1)) * CHAR_BIT)
+    memset(arr_name + 1, expr ? 0xFF : 0, ((arr_name[0] / BITS_IN_UL) + (arr_name[0] % BITS_IN_UL == 0 ? 0 : 1)) * sizeof(bitset_index_t))
 
 // sets the specified bit on the index 'idx' in the array to the value specified by the expression 'expr'
 #define bitset_setbit(arr_name, idx, expr) \
@@ -78,7 +78,7 @@ inline bitset_index_t bitset_size(bitset_t arr_name)
 // works in the same way as macro 'bitset_fill'
 inline void bitset_fill(bitset_t bitset, bool expr)
 {
-    memset(bitset + 1, expr ? ULONG_MAX : 0, ((bitset[0] / BITS_IN_UL) + (bitset[0] % BITS_IN_UL == 0 ? 0 : 1)) * CHAR_BIT);
+    memset(bitset + 1, expr ? 0xFF : 0, ((bitset[0] / BITS_IN_UL) + (bitset[0] % BITS_IN_UL == 0 ? 0 : 1)) * sizeof(bitset_index_t));
 }
 
 // works in the same way as macro 'bitset_setbit'
